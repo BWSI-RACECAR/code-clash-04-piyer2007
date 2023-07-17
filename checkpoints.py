@@ -40,7 +40,7 @@ class Solution:
                 for j in range(len(checkpoints)):
                     if checkpoints[i] == checkpoints[len(checkpoints)-1]:
                         return max;
-                        if abs(checkpoints[j]-checkpoints[i]) > max and checkpoints[j] > checkpoints[i]):
+                        if abs(checkpoints[j]-checkpoints[i]) > max and checkpoints[j] > checkpoints[i]:
                             max = abs(checkpoints[j]-checkpoints[i])
 
             return max
