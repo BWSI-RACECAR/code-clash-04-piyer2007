@@ -39,8 +39,8 @@ class Solution:
             for i in range(len(checkpoints)):
                 if checkpoints[i] == checkpoints[len(checkpoints)-1]:
                     break;
-                if checkpoints[i+1]-checkpoints[i] > max:
-                    max = checkpoints[i+1]-checkpoints[i]
+                if abs(checkpoints[i+1]-checkpoints[i]) > max:
+                    max = abs(checkpoints[i+1]-checkpoints[i])
 
             return max
 
