@@ -37,10 +37,11 @@ class Solution:
             #TODO: Write code below to returnn an int with the solution to the prompt.
             max = 0
             for i in range(len(checkpoints)):
-                if checkpoints[i] == checkpoints[len(checkpoints)-1]:
-                    break;
-                if abs(checkpoints[i+1]-checkpoints[i]) > max:
-                    max = abs(checkpoints[i+1]-checkpoints[i])
+                for j in range(len(checkpoints)):
+                    if checkpoints[j] == checkpoints[len(checkpoints)-1]:
+                        break;
+                        if abs(checkpoints[j]-checkpoints[i]) > max && checkpoints[j] > checkpoints[i]):
+                            max = abs(checkpoints[j]-checkpoints[i])
 
             return max
 
