@@ -36,7 +36,7 @@ class Solution:
 
             #TODO: Write code below to returnn an int with the solution to the prompt.
             def bubblesort(arr):
-                for i in range(0, len(arr):
+                for i in range(0, len(arr)):
                     for j in range(0, len(arr)-1):
                         if arr[j] > arr[j+1]:
                             temp = arr[j]
