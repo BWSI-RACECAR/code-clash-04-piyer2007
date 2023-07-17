@@ -53,7 +53,7 @@ class Solution:
 
             distances = bubblesort(distances)
 
-            return distance[len(checkpoints)]-2)
+            return distance([len(checkpoints)]-2)
 
             pass
 
