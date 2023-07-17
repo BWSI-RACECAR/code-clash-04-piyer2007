@@ -35,16 +35,16 @@ class Solution:
             #return type: int
 
             #TODO: Write code below to returnn an int with the solution to the prompt.
-            for i in range(len(checkpoint)):
-                min_index = i
+            def bubblesort(arr):
+                for i in range(0, len(arr):
+                    for j in range(0, len(arr)-1):
+                        if arr[j] > arr[j+1]:
+                            temp = arr[j]
+                            arr[j] = arr[j+1]
+                            arr[j+1] = temp
+                return arr
 
-                for j in range(i + 1, len(checkpoint)):
-            # select the minimum element in every iteration
-                    if checkpoints[j] < checkpoints[min_index]:
-                        min_index = j
-                (checkpoints[i], checkpoints[min_index]) = (checkpoints[min_index], checkpoints[i])
-
-
+            checkpoints = bubblesort(checkpoints)
             max = 0
             for i in range(len(checkpoints)):
                 if checkpoints[i] == checkpoints[len(checkpoints)-1]:
