@@ -45,14 +45,15 @@ class Solution:
                 return arr
 
             checkpoints = bubblesort(checkpoints)
-            max = 0
-            for i in range(len(checkpoints)):
-                if checkpoints[i] == checkpoints[len(checkpoints)-1]:
-                    break;
-                if checkpoints[i+1]-checkpoints[i] > max:
-                    max = checkpoints[i+1]-checkpoints[i]
 
-            return max
+            distances = []
+
+            for i in range(len(checkpoints)-1):
+                distances.append(checkpoints[i+1]-checkpoints[i])
+
+            distances = bubblesort(distances)
+
+            return distance[len(checkpoints)]-2)
 
             pass
 
