@@ -35,13 +35,22 @@ class Solution:
             #return type: int
 
             #TODO: Write code below to returnn an int with the solution to the prompt.
+            for i in range(len(checkpoint)):
+                min_index = i
+
+                for j in range(i + 1, len(checkpoint)):
+            # select the minimum element in every iteration
+                    if checkpoints[j] < checkpoints[min_index]:
+                        min_index = j
+                (checkpoints[i], checkpoints[min_index]) = (checkpoints[min_index], checkpoints[i])
+
+
             max = 0
             for i in range(len(checkpoints)):
-                for j in range(len(checkpoints)):
-                    if checkpoints[i] == checkpoints[len(checkpoints)-1]:
-                        return max;
-                        if abs(checkpoints[j]-checkpoints[i]) > max and checkpoints[j] > checkpoints[i]:
-                            max = abs(checkpoints[j]-checkpoints[i])
+                if checkpoints[i] == checkpoints[len(checkpoints)-1]:
+                    break;
+                if checkpoints[i+1]-checkpoints[i] > max:
+                    max = checkpoints[i+1]-checkpoints[i]
 
             return max
 
